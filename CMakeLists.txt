@@ -3,4 +3,4 @@ project(thistlethwaite)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(thistlethwaite main.cpp)
+add_executable(thistlethwaite main.cpp cubelib.hpp enumerations/enumconversions.cpp cube_representation/constructors.cpp cube_representation/accessors.cpp cube_representation/output.cpp cube_representation/rotation.cpp cube_hashing/general_hash.cpp cube_representation/operators.cpp cube_hashing/g0_hash.cpp cube_hashing/g1_hash.cpp cube_hashing/g2_hash.cpp cube_hashing/g3_hash.cpp cube_hashing/checker.cpp)
