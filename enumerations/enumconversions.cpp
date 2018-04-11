@@ -82,3 +82,21 @@ char cl::aaside_to_a(const cl::aaside &s) {
 		case aaside::front_back: return 'f';
 	}
 }
+
+char cl::rotation_to_a(const cl::rotation &s) {
+	switch (s) {
+		case rotation::U: return 'U';
+		case rotation::F: return 'F';
+		case rotation::R: return 'R';
+		case rotation::D: return 'D';
+		case rotation::B: return 'B';
+		case rotation::L: return 'L';
+
+		case rotation::u: return 'u';
+		case rotation::f: return 'f';
+		case rotation::r: return 'r';
+		case rotation::d: return 'd';
+		case rotation::b: return 'b';
+		case rotation::l: return 'l';
+	}
+}

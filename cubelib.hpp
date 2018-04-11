@@ -34,6 +34,7 @@ namespace cl {
 	char cside_to_a(const cside &s);
 	char aside_to_a(const aside &s);
 	char aaside_to_a(const aaside &s);
+	char rotation_to_a(const rotation &s);
 
 	/**
 	 * Main data structure for cube
@@ -50,7 +51,8 @@ namespace cl {
 
 	public:
 		cube();
-		cube(const std::string &s);
+		explicit cube(const std::string &s);
+		cube(cube &copy);
 
 		cside getc(const std::string &s);
 		aside geta(const std::string &s);

@@ -9,7 +9,7 @@ uint64_t cl::cube::g3hash() {
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 3; j++) {
 			for (int k = 0; k < 3; k++) {
-				if (crepr[i][j][k] == i) {
+				if (arepr[i][j][k] == i) {
 					int index = (i * 9 + j * 3 + k);
 					res |= ONE << (index);
 				}

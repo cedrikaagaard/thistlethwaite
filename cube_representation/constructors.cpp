@@ -44,3 +44,15 @@ cl::cube::cube(const std::string &s) {
 		}
 	}
 }
+
+cl::cube::cube(cl::cube &copy) {
+	for (int i = 0; i < 6; i++) {
+		for (int j = 0; j < 3; j++) {
+			for (int k = 0; k < 3; k++) {
+				crepr[i][j][k] = copy.crepr[i][j][k];
+				arepr[i][j][k] = copy.arepr[i][j][k];
+				aarepr[i][j][k] = copy.aarepr[i][j][k];
+			}
+		}
+	}
+}
