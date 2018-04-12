@@ -40,6 +40,24 @@ cside cl::a_to_cside(const char &c) {
 	}
 }
 
+rotation cl::a_to_rotation(const char &c) {
+	switch (c) {
+		case 'U': return rotation::U;
+		case 'R': return rotation::R;
+		case 'F': return rotation::F;
+		case 'D': return rotation::D;
+		case 'L': return rotation::L;
+		case 'B': return rotation::B;
+
+		case 'u': return rotation::u;
+		case 'r': return rotation::r;
+		case 'f': return rotation::f;
+		case 'd': return rotation::d;
+		case 'l': return rotation::l;
+		case 'b': return rotation::b;
+	}
+}
+
 aaside cl::aside_to_aaside(const aside &s) {
 	switch (s) {
 		case aside::up: return aaside::up_down;

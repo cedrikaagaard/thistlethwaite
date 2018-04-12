@@ -235,3 +235,9 @@ void cl::cube::rotate(const cl::rotation &r) {
 			break;
 	}
 }
+
+void cl::cube::rotate(const std::vector<cl::rotation> &r) {
+	for (auto &rotation : r) {
+		rotate(rotation);
+	}
+}
