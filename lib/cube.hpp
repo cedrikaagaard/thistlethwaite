@@ -16,8 +16,8 @@ namespace thistlethwaite {
 		/**
 		 * Creates a new instance of a specified cube.
 		 * If an invalid cube representation is passed, an exception is thrown.
-		 * @param s the specified representation of the cube in the form.
-		 * UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
+		 * @param s the specified representation of the cube in the form:
+		 * UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB.
 		 */
 		cube(const std::string &s);
 
