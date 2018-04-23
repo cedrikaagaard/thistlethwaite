@@ -52,7 +52,7 @@ The cube representation is inspired by: https://github.com/muodov/kociemba
              |************|
 ```
 #### String representation
-`U1, U2, ..., U9, R1, R2, ..., R9...`
+`U1, U2, ..., U9, R1, R2, ..., R9, ..., B9`
 `UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB`
 
 ### Generating tables
