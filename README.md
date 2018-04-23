@@ -1,4 +1,4 @@
-# Thistlethwaite's algorithm C++
+# Thistlethwaite's Algorithm C++ Library
 A C++ implementation of a modified version of Thistlethwaite's four phase
 Rubik'c cube solving algorithm.
 
@@ -123,7 +123,7 @@ representing the rotations that will solve the cube.
 Before `thistlethwaite::solve()` is called, the tables needs to be initialized
 by calling `thistlethwaite::init_tables()` which will read the tables into memory.
 The tables are rather large, so this may take up to about a minute. The memory used
-by the tables can be deallocated with `thistlethwaite::deallocate_tables()`.
+by the tables can be deallocated with `thistlethwaite::deallocate_tables()`
 
 ```C++
 thistlethwaite::init_tables();
