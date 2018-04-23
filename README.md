@@ -51,9 +51,9 @@ The cube representation is inspired by: https://github.com/muodov/kociemba
              |*D7**D8**D9*|
              |************|
 ```
-
-String representation: U1, U2, ..., U9, R1, R2, ..., R9...
-String representation: UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
+#### String representation
+`U1, U2, ..., U9, R1, R2, ..., R9...`
+UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB`
 
 ### Generating tables
 Thistlethwaite's algorithm uses lookup tables that needs to be generated
