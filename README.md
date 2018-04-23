@@ -57,13 +57,12 @@ thistlethwaite::cube cube;     // solved cube
 The cube.rotate() method takes a string as argument which represents
 the rotations in the following way:
 
-U = up, R = right, F = front, D = down, L = left & B = back. Upper case letters
+`U = up, R = right, F = front, D = down, L = left & B = back` Upper case letters
 represent clockwise rotations and lower case letters represent counter clockwise
 rotations.
 
 ```C++
-cube.rotate("RLf"); // Simulates the rotations: right clockwise, left clockwise and
-front counter clockwise.
+cube.rotate("RLf"); // Right clockwise, left clockwise and front counter clockwise.
 ```
 
 #### Accessors
@@ -74,4 +73,37 @@ by its internal representation. (The cube is represented by `[6][3][3]` internal
 ```C++
 cube.get("U5"); // Requests the center sticker on the upper side of the cube.
 cube.get(0, 1, 1); // Does the same as above.
+```
+
+### Executing Thistlethwaite's algorithm
+The thistlethwaite::solve()``method can be called either with a cube object or
+a cube string representation as argument. The method will return a string
+representing the rotations that will solve the cube.
+
+Before `thistlethwaite::solve()` is called, the tables needs to be initialized
+by calling `thistlethwaite::init_tables()` which will read the tables into memory.
+The tables are rather large, so this may take up to about a minute. The memory used
+by the tables can be deallocated with `thistlethwaite::deallocate_tables()`.
+
+```C++
+thistlethwaite::init_tables();
+thistlethwaite::solve(cube);
+thistlethwaite::deallocate_tables();
+```
+
+## Full example program
+```C++
+#include <iostream>
+#include "cube.hpp"
+#include "solver.hpp"
+#include "tablegen.hpp"
+
+int main() {
+    // Could be moved to a separate program
+    thistlethwaite::generate_tables();
+    thistlethwaite::init_tables();
+    thistlethwaite::cube cube("WYYBYWBGGWOGRROYBRWORWBYGRORBBWWYRGYGOOGOBBRYOGOYGWBRW");
+    std::cout << thistlethwaite::solve(cube) << std::endl;
+    return 0;
+}
 ```
