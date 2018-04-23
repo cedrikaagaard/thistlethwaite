@@ -75,6 +75,9 @@ cube.get("U5"); // Requests the center sticker on the upper side of the cube.
 cube.get(0, 1, 1); // Does the same as above.
 ```
 
+#### Output
+`cube.print()` prints a nicely formatted representation of the cube.
+
 ### Executing Thistlethwaite's algorithm
 The thistlethwaite::solve()``method can be called either with a cube object or
 a cube string representation as argument. The method will return a string
@@ -102,8 +105,10 @@ int main() {
     // Could be moved to a separate program
     thistlethwaite::generate_tables();
     thistlethwaite::init_tables();
-    thistlethwaite::cube cube("WYYBYWBGGWOGRROYBRWORWBYGRORBBWWYRGYGOOGOBBRYOGOYGWBRW");
+    thistlethwaite::cube cube("BWWBYWOGGYOOYRRYYWBOOWBOYGORRBBWBGYGRRWOOGYWBGRWYGBRGR");
     std::cout << thistlethwaite::solve(cube) << std::endl;
     return 0;
 }
 ```
+
+`>>> RlUfbblrr`
