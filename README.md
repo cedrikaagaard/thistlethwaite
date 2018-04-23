@@ -116,7 +116,7 @@ cube.get(0, 1, 1); // Does the same as above.
 `cube.print()` prints a nicely formatted representation of the cube.
 
 ### Executing Thistlethwaite's algorithm
-The thistlethwaite::solve()``method can be called either with a cube object or
+The `thistlethwaite::solve()` method can be called either with a cube object or
 a cube string representation as argument. The method will return a string
 representing the rotations that will solve the cube.
 
