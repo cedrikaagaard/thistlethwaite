@@ -1,6 +1,6 @@
 #include <vector>
 #include <string>
-#include <boost/filesystem/operations.hpp>
+#include <experimental/filesystem>
 #include "tableutil.hpp"
 
 std::string rotvectoar(const std::vector<rotation> &rv) {
@@ -29,8 +29,8 @@ std::string get_table_path(int g) {
 	std::string home = getenv("HOME");
 	std::string table_dir = "/.thistlethwaite";
 
-	boost::filesystem::path full_path(home + table_dir);
-	boost::filesystem::create_directory(full_path);
+	std::experimental::filesystem::path full_path(home + table_dir);
+	std::experimental::filesystem::create_directory(full_path);
 
 	return full_path.string() + "/g" + std::to_string(g) + ".dat";
 }

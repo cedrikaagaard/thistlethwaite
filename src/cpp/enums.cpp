@@ -1,5 +1,6 @@
 #include <string>
 #include <sstream>
+#include <stdexcept>
 #include "enums.hpp"
 
 side atoside(const char &c) {

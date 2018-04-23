@@ -1,7 +1,8 @@
-find_package(Boost 1.65.1 COMPONENTS system filesystem REQUIRED)
-include_directories(${Boost_INCLUDE_DIRS})
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 cmake_minimum_required(VERSION 3.1)
+
+# For std::experimental::filesystem
+set(CMAKE_CXX_FLAGS "-lstdc++fs")
 
 # Static library
 project(thistlethwaite)
@@ -11,8 +12,6 @@ ADD_LIBRARY(
 		src/cpp/acceccors.cpp src/cpp/constructors.cpp src/cpp/output.cpp
 		src/cpp/stageid.cpp src/headers/tableutil.hpp src/cpp/tablegen.cpp
 		src/cpp/tableutil.cpp src/cpp/solver.cpp lib/rand.hpp src/cpp/rand.cpp
-		src/cpp/stagecheck.cpp
-)
+		src/cpp/stagecheck.cpp)
 
 target_include_directories(thistlethwaite PRIVATE lib src/headers)
-target_link_libraries(thistlethwaite ${Boost_LIBRARIES})
