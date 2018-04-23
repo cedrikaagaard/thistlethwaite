@@ -25,29 +25,6 @@ This builds a static library `libthistlethwaite.a`
 To use this library, copy the header files found in the `lib/` directory as well
 as `libthistlethwaite.a` (which will have to be linked) to your project.
 
-### Generating tables
-Thistlethwaite's algorithm uses lookup tables that needs to be generated
-before the algorithm can be executed.
-
-Generating these tables takes a couple of minutes, but only has to be done once.
-The tables will be stored under `~/.thistlethwaite`
-
-```C++
-#include "tablegen.hpp"
-thistlethwaite::generate_tables();
-```
-
-### Rand
-This library implements a function that generates random rotations, this
-can be useful for scrambling a cube. The only argument of the function is
-the number of rotations.
-```C++
-#include "rand.hpp"
-std::cout << thistlethwaite::get_random_rotations(25) << std::endl;
-```
-`>>> rRBFlfUFbRUBUFDbrRLLDRdBL`
-
-
 ### Cube representation
 The cube representation is inspired by: https://github.com/muodov/kociemba
 
@@ -77,6 +54,28 @@ The cube representation is inspired by: https://github.com/muodov/kociemba
 
 String representation: U1, U2, ..., U9, R1, R2, ..., R9...
 String representation: UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
+
+### Generating tables
+Thistlethwaite's algorithm uses lookup tables that needs to be generated
+before the algorithm can be executed.
+
+Generating these tables takes a couple of minutes, but only has to be done once.
+The tables will be stored under `~/.thistlethwaite`
+
+```C++
+#include "tablegen.hpp"
+thistlethwaite::generate_tables();
+```
+
+### Rand
+This library implements a function that generates random rotations, this
+can be useful for scrambling a cube. The only argument of the function is
+the number of rotations.
+```C++
+#include "rand.hpp"
+std::cout << thistlethwaite::get_random_rotations(25) << std::endl;
+```
+`>>> rRBFlfUFbRUBUFDbrRLLDRdBL`
 
 ### Cube object
 
