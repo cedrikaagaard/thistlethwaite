@@ -1,6 +1,6 @@
 # Thistlethwaite's Algorithm C++ Library
 A C++ implementation of a modified version of Thistlethwaite's four phase
-Rubik'c cube solving algorithm.
+Rubik's cube solving algorithm.
 
 ## Building
 This project uses C++17 standard features, including
@@ -86,7 +86,7 @@ to the constructor or by initializing a solved cube.
 ```C++
 #include "cube.hpp"
 
-thistlethwaite::cube cube("BWWBYWOGGYOOYRRYYWBOOWBOYGORRBBWBGYGRRWOOGYWBGRWYGBRGR"); // Defined cube state
+thistlethwaite::cube cube("BWWBYWOGGYOOYRRYYWBOOWBOYGORRBBWBGYGRRWOOGYWBGRWYGBRGR");
 thistlethwaite::cube cube;     // solved cube
 ```
 
